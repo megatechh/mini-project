@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz Web App</title>
+    <link rel="stylesheet" href="quiz.css">                 
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-screen">
+               
+            <h1>Welcome to the Quiz</h1>
+            <p>Fill in your details to get started</p>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Enter your name" required>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Proceed to Quiz</button>
+            </form>
+        </div>
+
+
+        <div id="start-screen" class="hidden">
+            <h1>Welcome, <span id="user-name"></span>!</h1>
+            <p>Select a Topic to begin the quiz.</p>
+            <div id="categories">
+                <button class="category-button" data-category="arrays">Arrays</button>
+                <button class="category-button" data-category="graphs">Graphs</button>
+                <button class="category-button" data-category="dp">Dynamic Programming</button>
+                <button class="category-button" data-category="lg">Logical reasoning</button>
+                <button class="category-button" data-category="sp">Sports</button>
+            </div>
+            <button id="start-button" class="hidden">Start Quiz</button>
+        </div>
+
+
+        <div id="quiz-screen" class="hidden">
+            <div id="question-container">
+                <h2 id="question-text"></h2>
+                <div id="answer-buttons" class="buttons-container"></div>
+            </div>
+            <div id="timer">Time Left: <span id="time-left">60</span>s</div>
+        </div>
+
+       
+        <div id="result-screen" class="hidden">
+            <h1>Quiz Completed!</h1>
+            <p><strong>Your Score:</strong> <span id="final-score"></span></p>
+            <div id="answers-summary"></div>
+            <button id="restart-button">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
